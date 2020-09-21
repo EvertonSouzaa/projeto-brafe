@@ -1,10 +1,5 @@
-/* Breakpoints
-960
-
-740
- */
-
 /* Reset */
+
 body,
 h1,
 h2,
@@ -16,7 +11,7 @@ ul {
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, serif;
   color: #252525;
 }
 
@@ -37,7 +32,7 @@ body {
 }
 
 .menu-container::after,
-.menu-container:before {
+.menu-container::before {
   content: "";
   display: table;
   clear: both;
@@ -67,13 +62,20 @@ a.menu-logo {
 }
 
 @media (max-width: 739px) {
+  .menu {
+    text-align: center;
+  }
+  a.menu-logo {
+    float: none;
+    margin: 0 auto;
+  }
   .menu-nav {
     float: none;
     clear: both;
   }
 }
 
-/* introdução */
+/* Intro */
 
 .intro {
   background: url("../img/bg-intro.jpg") no-repeat center center;
@@ -120,7 +122,7 @@ a.menu-logo {
 }
 
 .sobre-container::after,
-.sobre-container:before {
+.sobre-container::before {
   content: "";
   display: table;
   clear: both;
@@ -205,6 +207,7 @@ a.menu-logo {
   display: table;
   clear: both;
 }
+
 .produtos-item {
   width: 300px;
   float: left;
@@ -226,12 +229,13 @@ a.menu-logo {
   border-radius: 50%;
   margin: 20px auto;
   border: 5px solid #e7e4d8;
-  box-shadow: 0 0 0 10px currentColor;
+  box-shadow: 0 0 0 5px currentColor;
 }
 
 h2.produtos-paulista::before {
   color: #492901;
 }
+
 h2.produtos-carioca::before {
   color: #c17139;
 }
@@ -247,16 +251,16 @@ h2.produtos-mineiro::before {
 
 .produtos-btn {
   width: 180px;
-  border: 3px solid;
+  border: 3px solid #252525;
   color: #252525;
   text-decoration: none;
   display: block;
+  margin: 20px auto 0 auto;
+  text-align: center;
   font-size: 1.125em;
   font-weight: bold;
   text-transform: uppercase;
-  text-align: center;
   padding: 15px 0;
-  margin: 20px auto 0 auto;
 }
 
 @media (min-width: 740px) and (max-width: 980px) {
@@ -273,11 +277,11 @@ h2.produtos-mineiro::before {
     max-width: 300px;
   }
   .produtos-item {
-    margin: 0px auto 20px auto;
+    margin: 0 auto 20px auto;
   }
 }
 
-/* locais */
+/* Locais */
 
 .locais {
   max-width: 960px;
@@ -291,7 +295,7 @@ h2.produtos-mineiro::before {
 }
 
 .locais-item::after,
-.locais-item:before {
+.locais-item::before {
   display: table;
   content: "";
   clear: both;
@@ -323,12 +327,33 @@ h2.produtos-mineiro::before {
 }
 
 .locais-item a {
-  font-size: 1.125;
+  font-size: 1.125em;
   text-transform: uppercase;
   text-decoration: none;
   border: 3px solid;
   color: #252525;
   padding: 10px 20px;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+  .locais {
+    max-width: 720px;
+  }
+  .locais-item > div,
+  .locais-item img {
+    width: 340px;
+  }
+}
+
+@media (max-width: 739px) {
+  .locais {
+    max-width: 300px;
+  }
+  .locais-item > div,
+  .locais-item img {
+    width: 300px;
+    margin: 0px;
+  }
 }
 
 /* Assine */
@@ -344,7 +369,7 @@ h2.produtos-mineiro::before {
 }
 
 .assine-container::after,
-.assine-container:before {
+.assine-container::before {
   content: "";
   display: table;
   clear: both;
@@ -381,7 +406,7 @@ h2.produtos-mineiro::before {
   background: none;
   font-size: 1.5em;
   font-style: italic;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, serif;
   padding: 10px;
   float: left;
 }
@@ -389,7 +414,7 @@ h2.produtos-mineiro::before {
 .assine button {
   background: #252525;
   border: none;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, serif;
   text-transform: uppercase;
   font-size: 1.5em;
   width: 140px;
@@ -398,21 +423,49 @@ h2.produtos-mineiro::before {
   cursor: pointer;
 }
 
-/* Footer */
+@media (min-width: 740px) and (max-width: 980px) {
+  .assine-container {
+    max-width: 720px;
+  }
+  .assine-info,
+  .assine form,
+  .assine input {
+    width: 340px;
+  }
+}
+
+@media (max-width: 739px) {
+  .assine-container {
+    max-width: 300px;
+  }
+  .assine-info,
+  .assine form,
+  .assine input {
+    width: 300px;
+    margin: 10px 0 0 0;
+  }
+}
+
+/*Footer*/
 
 .footer {
   background: #d6d3c8;
   padding: 40px 0;
 }
 
+.footer-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .footer-container::after,
-.footer-container:before {
+.footer-container::before {
   content: "";
   display: table;
   clear: both;
 }
 
-.footer-container p {
+.footer p {
   float: left;
   margin: 0 10px;
   font-size: 1.125em;
@@ -423,4 +476,18 @@ h2.produtos-mineiro::before {
   float: right;
   margin: 0 10px;
   display: block;
+}
+
+@media (max-width: 739px) {
+  .footer-container {
+    max-width: 300px;
+  }
+  .footer p {
+    float: none;
+    margin: 0px;
+  }
+  .footer img {
+    float: none;
+    margin: 20px 0;
+  }
 }
